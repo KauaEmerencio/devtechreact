@@ -1,0 +1,27 @@
+.faq {
+  position: relative;
+}
+
+.faq button:hover {
+  background: rgba(0, 243, 255, 0.05) !important;
+}
+
+.faq div[style*="background: rgba(16, 16, 26, 0.8)"] {
+  transition: all 0.3s ease;
+}
+
+.faq div[style*="background: rgba(16, 16, 26, 0.8)"]:hover {
+  border-color: rgba(0, 243, 255, 0.3) !important;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .faq {
+    padding: 70px 0 !important;
+  }
+  
+  .faq button {
+    padding: 15px !important;
+    font-size: 0.95rem !important;
+  }
+}

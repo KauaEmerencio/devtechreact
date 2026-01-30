@@ -1,0 +1,38 @@
+.solucoes {
+  position: relative;
+  overflow: hidden;
+}
+
+.solucoes::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #d60e0e, transparent);
+}
+
+.solucoes .container > div > div {
+  transition: all 0.3s ease;
+}
+
+.solucoes .container > div > div:hover {
+  box-shadow: 0 15px 35px rgba(0, 243, 255, 0.15);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .solucoes {
+    padding: 70px 0 !important;
+  }
+  
+  .solucoes .container > div {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+  
+  .solucoes .container > div > div {
+    padding: 30px 20px !important;
+  }
+}

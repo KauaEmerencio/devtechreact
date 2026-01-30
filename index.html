@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a0a0f" />
+    <meta name="description" content="DevTech - Desenvolvimento de sites e soluções digitais" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://kauaemerencio.github.io/devtech/" />
+    <meta property="og:title" content="DevTech - Soluções Digitais" />
+    <meta property="og:description" content="Desenvolvemos sites incríveis que impulsionam seu negócio" />
+    <meta property="og:image" content="%PUBLIC_URL%/og-image.jpg" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://kauaemerencio.github.io/devtech/" />
+    <meta property="twitter:title" content="DevTech - Soluções Digitais" />
+    <meta property="twitter:description" content="Desenvolvemos sites incríveis que impulsionam seu negócio" />
+    <meta property="twitter:image" content="%PUBLIC_URL%/og-image.jpg" />
+    
+    <title>DevTech - Desenvolvimento de Sites e Soluções Digitais</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Remova o <link> abaixo se não tiver manifest.json -->
+    <!-- <link rel="manifest" href="%PUBLIC_URL%/manifest.json" /> -->
+</head>
+<body>
+    <!-- Loading inicial -->
+    <div id="loading" style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #0a0a0f;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        transition: opacity 0.5s ease;
+    ">
+        <div class="loading-spinner" style="
+            width: 60px;
+            height: 60px;
+            border: 4px solid rgba(0, 243, 255, 0.1);
+            border-top: 4px solid #00f3ff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        "></div>
+    </div>
+    
+    <noscript>
+        <div style="
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #0a0a0f;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            z-index: 10000;
+        ">
+            <div>
+                <h1 style="color: #00f3ff; margin-bottom: 20px;">JavaScript Requerido</h1>
+                <p style="color: #a0a0c0; max-width: 600px; line-height: 1.6;">
+                    Para visualizar este site, é necessário habilitar o JavaScript no seu navegador.
+                    <br><br>
+                    Por favor, ative o JavaScript nas configurações do seu navegador e recarregue a página.
+                </p>
+            </div>
+        </div>
+    </noscript>
+    
+    <div id="root"></div>
+    
+    <style>
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #0a0a0f;
+            font-family: 'Poppins', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+                'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        /* Scrollbar personalizada */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #0a0a0f;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(to bottom, #00f3ff, #b300ff);
+            border-radius: 5px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(to bottom, #00d5e0, #9a00d4);
+        }
+        
+        /* Seleção de texto */
+        ::selection {
+            background: rgba(0, 243, 255, 0.3);
+            color: white;
+        }
+        
+        /* Foco em elementos */
+        :focus {
+            outline: 2px solid #00f3ff;
+            outline-offset: 2px;
+        }
+        
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+    
+    <!-- Script para remover loading -->
+    <script>
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                var loading = document.getElementById('loading');
+                if (loading) {
+                    loading.style.opacity = '0';
+                    setTimeout(function() {
+                        loading.style.display = 'none';
+                    }, 500);
+                }
+            }, 500);
+        });
+    </script>
+</body>
+</html>

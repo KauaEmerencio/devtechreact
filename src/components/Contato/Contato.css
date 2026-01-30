@@ -1,0 +1,36 @@
+.contato {
+  position: relative;
+}
+
+.contato::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #00ff88, transparent);
+}
+
+.contato input:focus,
+.contato select:focus,
+.contato textarea:focus {
+  outline: none;
+  border-color: #00f3ff !important;
+  box-shadow: 0 0 15px rgba(0, 243, 255, 0.2);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .contato {
+    padding: 70px 0 !important;
+  }
+  
+  .contato > div > div:first-child {
+    margin-bottom: 30px;
+  }
+  
+  .contato form {
+    padding: 25px 20px !important;
+  }
+}
